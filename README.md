@@ -1,4 +1,4 @@
-le langage sera: ????
+le langage:
 - python
 package-manager:
 - uv 
