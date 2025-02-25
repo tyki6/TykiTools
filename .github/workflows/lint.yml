@@ -25,7 +25,7 @@ jobs:
           restore-keys: uv-${{ runner.os }}-
 
       - name: Install dependencies
-        run: uv pip install --system
+        run: uv venv && uv pip install -r pyproject.toml
 
       - name: Run Ruff (lint & format)
         run: uv run ruff check .
