@@ -1,0 +1,56 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$PYTHONPYCACHEPREFIX/
+
+# Environnements virtuels
+venv/
+.env/
+.venv/
+pipenv/
+Pipfile.lock
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Configurations d'IDE / éditeurs
+.vscode/
+.idea/
+*.iml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Fichiers spécifiques à pytest et coverage
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+.cache/
+nosetests.xml
+coverage.xml
+pytest_cache/
+
+# Fichiers générés par MyPy
+.mypy_cache/
+dmypy.json
+dmypy/
+
+# Docker / Kubernetes
+docker-compose.override.yml
+.envrc
+.kube/
+
+# Secrets
+.env
+*.pem
+*.key

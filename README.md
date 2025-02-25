@@ -1,10 +1,13 @@
-le langage sera: ????
+le langage:
 - python
 package-manager:
 - uv 
 CICD: 
 - Github-action
-liste des fonctionnalités:
+Accuellement:
+- Ip Lookup
+liste des fonctionnalités future:
+- Username Tracker
 - Obfuscator Tool
 - Sql Vulnerability Scanner
 - ? Website Scanner
@@ -12,7 +15,6 @@ liste des fonctionnalités:
 - ? Ip Scanner
 - ping IP
 - Username Tracker
-- Email Tracker
 - Email Lookup
 - Phone Number Lookup
 - Ip Lookup
