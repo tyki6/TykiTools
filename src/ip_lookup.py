@@ -1,4 +1,6 @@
 import requests
+
+
 def ip_lookup(ip: str) -> str:
     """
     Given an IP address, return all Informations.
