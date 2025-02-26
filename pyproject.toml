@@ -7,5 +7,92 @@ requires-python = ">=3.13"
 dependencies = [
     "click>=8.1.8",
     "requests>=2.32.3",
-    "ruff>=0.9.7",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "mypy>=1.15.0",
+    "ruff>=0.9.7",
+    "types-requests>=2.32.0.20241016",
+]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+extend-select = ["I"]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP",  # pyupgrade
+    "ARG",
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "B006",  # do not perform function calls in argument defaults
+    "C901", # function is too complex disabled for now
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+relative-imports-order = "furthest-to-closest"
+known-third-party = ["fastapi", "pydantic", "starlette", "redis"]
+
+[tool.ruff.lint.pyupgrade]
+# Preserve types, even if a file imports `from __future__ import annotations`.
+keep-runtime-typing = true
+
+[tool.mypy]
+
+ignore_missing_imports = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+follow_imports = "normal"
+show_column_numbers = true
+strict_optional = true
+warn_redundant_casts = true
+pretty = false
+strict = true
+warn_unused_ignores = true
+check_untyped_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_untyped_decorators = false
+strict_equality = true
+exclude = "^(migrations|ignore)/"
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
