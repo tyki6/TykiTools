@@ -1,7 +1,7 @@
 import requests
 
 
-def ip_lookup(ip: str) -> str:
+def ip_lookup_from_string(ip: str) -> str:
     """
     Given an IP address, return all Informations.
     """
@@ -14,12 +14,6 @@ def ip_lookup(ip: str) -> str:
         city = data.get("city", "Ville inconnue")
         lat = data.get("lat", "Latitude inconnue")
         lon = data.get("lon", "Longitude inconnue")
-        return f"""
-        Le pays est : {country}
-        La région est : {region}
-        La ville est : {city}
-        La latitude est : {lat}
-        La longitude est : {lon}
-        """
+        return f"Le pays est : {country}\nLa région est : {region}\nLa ville est : {city}\nLa latitude est : {lat}\nLa longitude est : {lon}"
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
