@@ -8,4 +8,7 @@ dependencies = [
     "click>=8.1.8",
     "requests>=2.32.3",
     "ruff>=0.9.7",
+    "setuptools>=75.8.1",
+    "twine>=6.1.0",
+    "wheel>=0.45.1",
 ]
