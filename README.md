@@ -13,8 +13,8 @@ Ce projet est une suite d'outils OSINT (Open Source Intelligence) destinée aux 
 - [x] **Recherche d'informations sur une adresse IP** (geolocalisation, ASN, etc.)
 
 ## Fonctionnalités Futures :rocket:
+- [x] **Scraping et OSINT sur les réseaux sociaux** (Twitter, Instagram, etc.)
 - [ ] **Lookup de noms de domaine** (Whois, DNS records, etc.)
-- [ ] **Scraping et OSINT sur les réseaux sociaux** (Twitter, Instagram, etc.)
 - [ ] **Analyse d'adresses e-mail** (vérification de leaks, MX lookup...)
 - [ ] **Scan de fuites de données** (recherche dans des bases publiques)
 - [ ] **Une CLI robuste et interactive** (actuellement en développement)
