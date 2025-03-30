@@ -1,6 +1,7 @@
 import os
-from sherlock_project.sherlock import sherlock
+
 from sherlock_project.notify import QueryNotifyPrint
+from sherlock_project.sherlock import sherlock
 from sherlock_project.sites import SitesInformation
 
 
