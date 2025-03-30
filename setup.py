@@ -6,7 +6,7 @@ f.close()
 
 setuptools.setup(
     name="tykitools",
-    version="0.0.1",
+    version="0.2.0",
     author="tyki6",
     author_email="matthieubouamama@gmail.com",
     description="MultiTools OSINT Created by a tiktoker",
